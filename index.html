@@ -1,0 +1,262 @@
+<header>
+  <h1>🐶DogMarket</h1>
+  <p>犬を売りたい、買いたい人のためのサイト</p>
+  
+  <input type="text" id="search" placeholder="犬種で検索" >
+<button>検索</button>
+  
+  <select id="sex">
+
+  <option value="">性別</option>
+
+  <option value="男の子">男の子</option>
+
+  <option value="女の子">女の子</option>
+
+</select>
+
+<select id="price">
+
+  <option value="">価格</option>
+
+  <option value="0-200000">20万円以下</option>
+
+  <option value="200001-300000">20〜30万円</option>
+
+  <option value="300001-500000">30〜50万円</option>
+
+  <option value="500001-9999999">50万円以上</option>
+
+</select>
+</header>
+
+<main>
+  
+  <h2>おすすめの子犬</h2>
+  
+  <div class="dogs">
+    
+       <div class="card"
+
+data-name="トイプードル"
+
+data-sex="男の子"
+
+data-age="2ヶ月"
+
+data-prefecture="北海道"
+
+data-price="280000"
+
+data-description="元気いっぱいで人懐っこい性格です。"
+
+data-image="https://placehold.co/600x400">
+         
+         <div class="status sale">🟢 販売中</div>
+      <img src="https://placehold.co/350x250" alt="">
+      <h3>トイプードル</h3>
+      
+      <p>男の子</p>
+      <p>2か月</p>
+      
+      <h4>￥280,000</h4>
+      
+ 
+
+〜詳細確認〜
+
+<button class="detailBtn">
+
+詳細を見る
+
+</button>
+
+</div>
+    
+    <div class="card"
+
+data-name="柴犬"
+
+data-sex="女の子"
+
+data-age="3ヶ月"
+
+data-prefecture="北海道"
+
+data-price="220000"
+
+data-description="大人しい性格です。"
+
+data-image="https://placehold.co/600x400">
+      <div class="status sold">⚫ 売約済み</div>
+      <img src="https://placehold.co/350x250" alt="">
+      <h3>柴犬</h3>
+      
+      <p>女の子</p>
+      <p>３か月</p>
+      
+      <h4>￥220,000</h4>
+      
+      
+
+〜詳細確認〜
+
+<button class="detailBtn">
+
+詳細を見る
+
+</button>
+
+</div>
+    
+    <div class="card"
+
+data-name="チワワ"
+
+data-sex="女の子"
+
+data-age="1ヶ月"
+
+data-prefecture="北海道"
+
+data-price="300000"
+
+data-description="産まれたてで可愛いです！"
+
+data-image="https://placehold.co/600x400">
+      <div class="status meeting">🔴 商談中</div>
+      <img src="https://placehold.co/350x250" alt="">
+      <h3>チワワ</h3>
+      
+      <p>女の子</p>
+      <p>1ヶ月</p>
+      
+      <h4>￥300,000</h4>
+      
+      
+
+〜詳細確認〜
+
+<button class="detailBtn">
+
+詳細を見る
+
+</button>
+        
+        </div>
+  
+</main>
+
+<div id="dogModal" class="modal">
+
+  <div class="modal-content">
+
+    <span id="close">&times;</span>
+
+    <img id="dogImage" src="">
+
+    <h2 id="dogName"></h2>
+
+    <p id="dogSex"></p>
+
+    <p id="dogAge"></p>
+
+    <p id="dogPrefecture"></p>
+
+    <h3 id="dogPrice"></h3>
+
+    <p id="dogDescription"></p>
+
+    <button>📨お問い合わせ</button>
+
+  </div>
+
+</div>
+  
+  <!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+body{
+    font-family: sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    max-width:500px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>📨お問い合わせ</h2>
+
+<form id="contact-form">
+
+<input
+type="text"
+name="user_name"
+placeholder="お名前"
+required>
+
+<input
+type="email"
+name="user_email"
+placeholder="メールアドレス"
+required>
+
+<textarea
+name="message"
+rows="6"
+placeholder="お問い合わせ内容"
+required></textarea>
+
+<button type="submit">
+送信する
+</button>
+
+</form>
+
+<p id="result"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
